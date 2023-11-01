@@ -1,0 +1,49 @@
+#INHERITANCE PYTHON
+#class chef in a specific tutorial.py
+
+class Chef:
+    def make_pancake(self):
+        print("I have pancake sweet")
+
+    def make_tea(self):
+        print("My tea is hot ha!")
+
+    def make_cabbage(self):
+        print("The cabbage was raw LOL")    
+
+    def make_special(self):
+        print("Its special one")
+
+
+
+
+#otherfile.py
+from tutorial import Chef
+
+class otherChef(Chef): #inheritance
+
+    
+    def fried_rice(self):
+        print("Fried rice eeew!")
+
+    def make_special(self):
+        print("Special but from other")
+
+
+
+#mainfile.py to run the code
+
+from tutorial import Chef
+from otherFile import otherChef
+
+mychef = Chef()
+myotherchef = otherChef()
+
+
+mychef.make_cabbage()
+mychef.make_pancake()
+mychef.make_tea()
+mychef.make_special()
+
+myotherchef.make_special()
+myotherchef.fried_rice()
