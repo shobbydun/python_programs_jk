@@ -104,4 +104,74 @@ print(player3.on_form())
 
 
 
+class Cat:
+    pass
+
+sham = Cat()
+sham.color = "black"
+sham.size = "small"
+sham.eat = "rice"
+sham.age = 2
+
+print(sham.color)
+print(sham.age)
+
+
+
+class Ball:
+    def __init__(self,name,size):
+        self.name = name
+        self.size = size
+
+    def call_ball(self):
+        print("bundes",self.name)
+
+ball1 = Ball("fifaBall", "medium")       
+ball2 = Ball("epl", "hard") 
+
+
+ball1.call_ball()
+ball2.call_ball()
+
+
+class otherBall(Ball):
+    def __init__(self,name,size,color):
+        super.__init__(name,size)
+        self.color = color
+
+
+    def call_otherBall(self):
+        print("Hey", self.name, "is", self.color)
+
+otherBall1 = otherBall("mpira","medium","yellow")
+otherBall1.call_otherBall()    
+
+
+class   Bulldog:
+    def __init__(self,Color):
+        def call_bulldog(self):
+            print(self.Color)
+        
+
+
+
+class Animal:
+    def Speak(self):
+        pass
+
+class Dog(Animal):
+    def Speak(self):
+        return "woof"
+
+class LIon(Animal):
+    def Speak(self):
+        return "roar"
+
+dog1 = Dog()
+lion1 = LIon()
+
+
+print(dog1.Speak())
+print(lion1.Speak())
+
 
